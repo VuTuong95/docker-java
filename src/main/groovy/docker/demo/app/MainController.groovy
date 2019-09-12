@@ -14,8 +14,12 @@ class MainController {
     private static List<Person> persons = new ArrayList<Person>()
 
     static {
-        persons.add(new Person('Bill', 'Gates', 09756748))
-        persons.add(new Person('Steve', 'Jobs', 98485858))
+        try {
+            persons.add(new Person('Bill', 'Gates', '09756748'))
+            persons.add(new Person('Steve', 'Jobs', '98485858'))
+        }catch(Exception ex){
+            ex.getMessage();
+        }
     }
 
     // Inject via application.properties

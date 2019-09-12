@@ -5,13 +5,13 @@ class Person {
 
     private String firstName
     private String lastName
-    private Long phone
+    private String phone
 
     Person() {
 
     }
 
-    Person(String firstName, String lastName, Long phone) {
+    Person(String firstName, String lastName, String phone) {
         this.firstName = firstName
         this.lastName = lastName
         this.phone = phone
@@ -33,11 +33,11 @@ class Person {
         this.lastName = lastName
     }
 
-    Long getPhone() {
+    String getPhone() {
         return phone
     }
 
-    void setPhone(Long phone) {
+    void setPhone(String phone) {
         this.phone = phone
     }
 }
