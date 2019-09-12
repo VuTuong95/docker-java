@@ -5,14 +5,16 @@ class Person {
 
     private String firstName
     private String lastName
+    private Long phone
 
     Person() {
 
     }
 
-    Person(String firstName, String lastName) {
+    Person(String firstName, String lastName, Long phone) {
         this.firstName = firstName
         this.lastName = lastName
+        this.phone = phone
     }
 
     String getFirstName() {
@@ -31,4 +33,11 @@ class Person {
         this.lastName = lastName
     }
 
+    Long getPhone() {
+        return phone
+    }
+
+    void setPhone(Long phone) {
+        this.phone = phone
+    }
 }

@@ -14,8 +14,8 @@ class MainController {
     private static List<Person> persons = new ArrayList<Person>()
 
     static {
-        persons.add(new Person('Bill', 'Gates'))
-        persons.add(new Person('Steve', 'Jobs'))
+        persons.add(new Person('Bill', 'Gates', 09756748))
+        persons.add(new Person('Steve', 'Jobs', 98485858))
     }
 
     // Inject via application.properties
@@ -56,10 +56,11 @@ class MainController {
 
         String firstName = personForm.getFirstName()
         String lastName = personForm.getLastName()
+        Long phone = personForm.getPhone();
 
         if (firstName != null && firstName.length() > 0 //
-                && lastName != null && lastName.length() > 0) {
-            Person newPerson = new Person(firstName, lastName)
+                && lastName != null && lastName.length() > 0 && phone != null) {
+            Person newPerson = new Person(firstName, lastName, phone)
             persons.add(newPerson)
 
             return 'redirect:/personList'

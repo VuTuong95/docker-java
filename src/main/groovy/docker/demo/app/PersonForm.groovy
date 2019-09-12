@@ -5,6 +5,7 @@ class PersonForm {
 
     private String firstName
     private String lastName
+    private Long phone
 
     String getFirstName() {
         return firstName
@@ -22,4 +23,11 @@ class PersonForm {
         this.lastName = lastName
     }
 
+    Long getPhone() {
+        return phone
+    }
+
+    void setPhone(Long phone) {
+        this.phone = phone
+    }
 }
