@@ -42,7 +42,8 @@ class MainController {
 
         model.addAttribute('persons', persons)
 
-        return 'personList'
+//        return 'personList'
+        return 'garden'
     }
 
     @RequestMapping(value = '/addPerson', method = RequestMethod.GET)

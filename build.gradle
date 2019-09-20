@@ -29,8 +29,3 @@ dependencies {
     implementation 'org.codehaus.groovy:groovy'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
-
-task(run, dependsOn: 'classes', type: JavaExec) {
-    main = 'docker.demo.app.AppApplication'
-    classpath = sourceSets.main.runtimeClasspath
-}
