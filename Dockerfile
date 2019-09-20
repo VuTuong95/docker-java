@@ -1,6 +1,5 @@
-FROM openjdk:8-jdk-alpine
+FROM java:8
 MAINTAINER Tuong Vu
-VOLUME /tmp
-ADD /build/libs/*.jar docker-java.jar
+COPY ./build/libs/*.jar docker-java.jar
 ENTRYPOINT java -Djava.security.egd=file:/dev/./urandom -jar /docker-java.jar
 EXPOSE 8080
